@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../product.service';
+import { ProductService } from '../services/product.service';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
-import { Product } from '../Product';
-import { ProductCartService } from '../product-cart.service';
+import { Product } from '../classes/Product';
+import { ProductCartService } from '../services/product-cart.service';
 
 @Component({
   selector: 'app-home-page',
@@ -23,7 +23,6 @@ export class HomePageComponent implements OnInit {
     this.getProducts();
   }
   addToCart(product:Product):void{
-    console.log(product.id);
     this.productCartService.addToCart(product);
   }
 }
