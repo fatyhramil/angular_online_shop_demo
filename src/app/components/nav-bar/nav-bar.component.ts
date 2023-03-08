@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductCartService } from '../services/product-cart.service';
+import { ProductCartService } from 'src/app/services/product-cart.service';
 
 @Component({
   selector: 'app-nav-bar',

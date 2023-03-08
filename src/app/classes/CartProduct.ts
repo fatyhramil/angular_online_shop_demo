@@ -1,6 +1,6 @@
 import { Product } from "./Product";
 
 export class CartProduct{
-    public product: Product={id:0,title:"",price:0};
+    public product: Product;
     quantity:number=1;
 }

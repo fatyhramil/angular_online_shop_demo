@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule, Routes} from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/home',pathMatch:'full'},
-  {path: 'home', component: HomePageComponent},
-  {path:'shoppingcart', component:ShoppingCartComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'home',
+    loadChildren: () => import('./components/home-page/home-page.module').then(m =>
+      m.HomePageModule)
+  },
+  {
+    path: 'shoppingcart',
+    loadChildren:()=>import('./components/shopping-cart/shopping-cart.module').then(m=>
+      m.ShoppingCartModule)
+  }
 ];
 
 
@@ -15,7 +21,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes)
   ],
-  exports:[
+  exports: [
     RouterModule
   ]
 })

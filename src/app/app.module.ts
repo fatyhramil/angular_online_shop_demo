@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ProductListItemComponent } from './components/product-list-item/product-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomePageComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ProductListItemComponent
   ],
   imports: [
     BrowserModule,

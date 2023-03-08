@@ -2,7 +2,8 @@
     <p class="text-right">List of items</p>
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let product of products">
-            <div class="container">
+            <app-product-list-item [product]="product"></app-product-list-item>
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-sm">
                         {{product.title}}
@@ -14,7 +15,7 @@
                         <button (click)="addToCart(product)" type="button" class="btn float-right ml-2">Add to cart</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </li>
     </ul>
 </div>
