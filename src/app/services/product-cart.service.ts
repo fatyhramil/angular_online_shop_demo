@@ -13,14 +13,8 @@ export class ProductCartService {
   addToCart(newProduct: Product): void {
     let cartProduct = new CartProduct();
     cartProduct.product = newProduct;
-    // let existingProduct = this.cartProducts.find(a => a.product.id === newProduct.id);
-    // if (!this.cartProducts.find(a => a.product.id === newProduct.id)) {
-    //   this.cartProducts.push(cartProduct);
-    // }
-    // else {
-    //   cartProduct.quantity++;
-    // }
     let found: boolean = false;
+    //search for existing product
     this.cartProducts = this.cartProducts.map(cp => {
       if (cp.product?.id == newProduct?.id) {
         cp.quantity++;
