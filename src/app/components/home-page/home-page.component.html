@@ -1,0 +1,8 @@
+<div>
+    <p class="text-right">List of items</p>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let product of products">
+            <app-product-list-item [product]="product"></app-product-list-item>
+        </li>
+    </ul>
+</div>
